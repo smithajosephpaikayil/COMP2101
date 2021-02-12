@@ -19,10 +19,7 @@ echo "Setuid files:"
 echo "============="
 find / -type f -executable -perm -4000 -ls 2>/dev/null | sort -k 5
 echo ""
-##############################################################################
-echo "12 largest files:"
-echo "============="
-find / 2>/dev/null  -type f -exec ls -alh --block-size=M {} +| sort -hr -k5 | head -n 12|awk '{print $3,$5,$9}'
+
 # for the task, add
 # commands to display a title
 # commands to make a list of the 12 biggest files
